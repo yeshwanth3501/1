@@ -1,1 +1,2 @@
-i this is the second file this is being used to check wetharwe can add two files at a time to the staging area and also remove a single file from the staging area 
+hi this is the second file this is being used to check wetharwe can add two files at a time to the staging area and also remove a single file from the staging area 
+this is the third time i want to change the change the commit and add this to the lr from rr
