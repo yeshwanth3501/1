@@ -1,0 +1,1 @@
+i this is the second file this is being used to check wetharwe can add two files at a time to the staging area and also remove a single file from the staging area 
