@@ -1,27 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springappdeployment
+  name: springbootdeployment
+  namespace: yash
+  labels:
+    app: springboot
 spec:
- replicas: 2
- selector:
-   matchLabels:
-     app: springapp
- template:
-   metadata:
-     name: springapppod
-     labels:
-       app: springapp
-   spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springboot
+  template:
+    metadata:
+      labels:
+        app: springboot
+    spec:
       containers:
-      - name: springappcontainer
-        image: sivaram2210/spring-boot-mongo
+      - name: springbootfrontend
+        image: dockerhandson/spring-boot-mongo
         ports:
         - containerPort: 8080
         env:
         - name: MONGO_DB_HOSTNAME
-          value: mongo
+          value: mongodbsvc
         - name: MONGO_DB_USERNAME
           value: devdb
-        - name: MONGO_DB_PASSWORD
+        - name: MONGO_DB_PASSWD
           value: devdb@123
